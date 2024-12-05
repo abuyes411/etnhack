@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ETN Coin Airdrop Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #133A2A;
+      color: white;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h2>Your Balance: <span id="coinBalance">1.0 ETN</span></h2>
+  <button id="claimButton">Claim 1,000,000 Coins</button>
+
+  <script>
+    const coinBalanceEl = document.getElementById('coinBalance');
+    const claimButton = document.getElementById('claimButton');
+
+    claimButton.addEventListener('click', function() {
+      let currentBalance = parseFloat(localStorage.getItem('balance')) || 0;
+      const claimAmount = 1000000;
+      currentBalance += claimAmount;
+      localStorage.setItem('balance', currentBalance);
+      coinBalanceEl.textContent = `${currentBalance.toFixed(1)} ETN`;
+    });
+  </script>
+</body>
