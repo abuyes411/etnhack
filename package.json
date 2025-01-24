@@ -1,0 +1,10 @@
+{
+  "name": "website-info-bot",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "puppeteer": "^19.0.0"
+  }
+}
